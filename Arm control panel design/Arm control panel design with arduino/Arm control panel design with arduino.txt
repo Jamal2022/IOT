@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web controlled Servo</title>
+<script src="myjquery.js"></script>
+<style>
+h1 {
+  background-color:powderblue;
+  color: powderblue;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+.button {
+  background-color: #008CBA; /* Blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+<h1> h</h1>
+<h2> <b> لوحة تحكم للروبوت </b> </h2>
+<p>محرك 1 :<input type="range" min="0" max="180" onmouseup="servo1(this.value)" /></p>
+<p>محرك 2 :<input type="range" min="0" max="180" onmouseup="servo2(this.value)" /></p>
+<p>محرك 3 :<input type="range" min="0" max="180" onmouseup="servo3(this.value)" /></p>
+<p>محرك 4 :<input type="range" min="0" max="180" onmouseup="servo4(this.value)" /></p>
+<p>محرك 5 :<input type="range" min="0" max="180" onmouseup="servo5(this.value)" /></p>
+<p>محرك 6 :<input type="range" min="0" max="180" onmouseup="servo6(this.value)" /></p>
+<p>
+	<a href="/save"><button class="button" onclick="myFunction()">حفظ </button></a>
+	<a href="/run"><button class="button" onclick="myFunction()">تشغيل </button></a>
+</p>
+<h1> h</h1>
+</body>
+<script>
+$.ajaxSetup({timeout:1000});
+function servo1(angle)
+{
+    TextVar = form.inputbox.value;
+    ArduinoVar = "http://" + TextVar + ":80";
+    $.get( ArduinoVar, { "sr1": angle })    ;
+    {Connection: close};
+}
+function servo2(angle)
+{
+    TextVar = form.inputbox.value;
+    ArduinoVar = "http://" + TextVar + ":80";
+    $.get( ArduinoVar, { "sr2": angle })    ;
+    {Connection: close};
+}
+function servo3(angle)
+{
+    TextVar = form.inputbox.value;
+    ArduinoVar = "http://" + TextVar + ":80";
+    $.get( ArduinoVar, { "sr3": angle })    ;
+    {Connection: close};
+}
+function servo4(angle)
+{
+    TextVar = form.inputbox.value;
+    ArduinoVar = "http://" + TextVar + ":80";
+    $.get( ArduinoVar, { "sr4": angle })    ;
+    {Connection: close};
+}
+function servo5(angle)
+{
+    TextVar = form.inputbox.value;
+    ArduinoVar = "http://" + TextVar + ":80";
+    $.get( ArduinoVar, { "sr5": angle })    ;
+    {Connection: close};
+}
+function servo6(angle)
+{
+    TextVar = form.inputbox.value;
+    ArduinoVar = "http://" + TextVar + ":80";
+    $.get( ArduinoVar, { "sr6": angle })    ;
+    {Connection: close};
+}
+
+</script>
+
+</html>
